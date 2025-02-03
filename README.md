@@ -1,7 +1,7 @@
 
 # Wizybot Chatbot
 
-Wizybot Chatbot es una aplicación diseñada para [describir brevemente la funcionalidad y propósito de tu proyecto].
+Wizybot Chatbot es una aplicación diseñada para buscar productos y convertir el valor de una moneda utilizando la API de finalización de chat de OpenAI con llamada de funciones..
 
 ## Requisitos previos
 
