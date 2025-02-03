@@ -1,99 +1,134 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Wizybot Chatbot
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Wizybot Chatbot es una aplicación diseñada para [describir brevemente la funcionalidad y propósito de tu proyecto].
 
-## Description
+## Requisitos previos
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Antes de comenzar, asegúrate de tener instalados los siguientes componentes:
 
-## Project setup
+📦 Dependencias principales:
+NestJS (@nestjs/cli, @nestjs/schematics, @nestjs/testing) - Framework para construir aplicaciones en Node.js con TypeScript.
+Axios (@types/axios) - Cliente HTTP basado en promesas.
+Express (@types/express) - Framework minimalista para aplicaciones web en Node.js.
+Supertest (supertest, @types/supertest) - Librería para pruebas de integración HTTP.
 
-```bash
-$ npm install
-```
+🛠️ Herramientas de desarrollo:
+TypeScript (typescript, ts-node, ts-loader, tsconfig-paths) - Lenguaje de programación tipado basado en JavaScript.
+ESLint y Prettier (eslint, eslint-config-prettier, eslint-plugin-prettier, @eslint/eslintrc, @eslint/js, typescript-eslint) - Herramientas de linting y formateo de código.
+Jest y TS-Jest (jest, ts-jest, @types/jest) - Framework para pruebas unitarias.
+Source Map Support (source-map-support) - Permite mejorar la depuración con soporte para mapas de código fuente.
+SWC (@swc/cli, @swc/core) - Compilador rápido para TypeScript y JavaScript.
 
-## Compile and run the project
+## Instalación
 
-```bash
-# development
-$ npm run start
+Sigue estos pasos para configurar el entorno de desarrollo:
 
-# watch mode
-$ npm run start:dev
+1. **Clonar el repositorio:**
 
-# production mode
-$ npm run start:prod
-```
+   ```bash
+   git clone https://github.com/Crumbyeel10/Wizybot_chatbot.git
+   cd Wizybot_chatbot
 
-## Run tests
+2.🔧 Instalación de dependencias:
+Para instalar todas las dependencias necesarias, ejecuta el siguiente comando:
 
-```bash
-# unit tests
-$ npm run test
+npm install
 
-# e2e tests
-$ npm run test:e2e
+-Si deseas instalar solo las dependencias de desarrollo:
 
-# test coverage
-$ npm run test:cov
-```
+npm install --only=dev
 
-## Deployment
+3. Configurar variables de entorno:
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+Crea un archivo .env en la raíz del proyecto con las siguientes variables:
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+OPENAI_API_KEY_WIZZYBOT=tu_clave_api_de_openai
+OPEN_EXCHANGE_API_KEY=tu_clave_api_de_open_exchange
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+Asegúrate de reemplazar tu_clave_api_de_openai y tu_clave_api_de_open_exchange con tus claves API correspondientes.
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+4.Ejecución
+Para ejecutar la aplicación  utiliza el siguiente comando:
 
-## Resources
+npm run start
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Uso de la API
+La aplicación expone un endpoint para interactuar con el chatbot:
 
-## Support
+Endpoint: /chatbot
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Método HTTP: POST
 
-## Stay in touch
+URL: http://localhost:3000/chatbot
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+5.📡 API - Endpoints del Chatbot
+El chatbot expone los siguientes endpoints para búsqueda de productos, conversión de divisas y procesamiento de consultas generales.
+
+🔍 Buscar Productos
+- Endpoint: POST /chatbot/search
+- Descripción: Busca productos en la base de datos según una cadena de búsqueda.
+- Cuerpo de la solicitud (JSON):
+ json:
+{
+  "query": "iPhone"
+}
+
+
+Respuesta (JSON):
+
+[
+  {
+    "id": 1,
+    "name": "iPhone 13",
+    "price": 999.99
+  },
+  {
+    "id": 2,
+    "name": "iPhone 14",
+    "price": 1099.99
+  }
+]
+
+
+
+6. 💱 Conversión de Moneda
+Endpoint: POST /chatbot/convert
+Descripción: Convierte una cantidad de una moneda a otra utilizando tasas de cambio en tiempo real.
+Cuerpo de la solicitud (JSON):
+
+{
+  "amount": 100,
+  "from": "USD",
+  "to": "EUR"
+}
+
+
+Respuesta (JSON):
+
+{
+  "convertedAmount": "92.50 EUR"
+}
+
+7. 🤖 Procesar Consulta General
+Endpoint: POST /chatbot/queryy
+Descripción: Procesa una consulta general del usuario y devuelve una respuesta generada por el chatbot.
+Cuerpo de la solicitud (JSON):
+
+{
+  "query": "Am I looking for a phone?"
+}
+
+Respuesta (JSON):
+
+{
+  "response": "It sounds like you are searching for a phone. Do you need recommendations?"
+}
+
+
+8. Cada uno de estos endpoints está documentado en Swagger, por lo que puedes acceder a la documentación interactiva en:
+
+http://localhost:3000/api-docs#/
